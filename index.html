@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love percentage</title>
+    <script defer src="./script.js"></script>
+</head>
+<style>
+    body {
+        background: #f7f7f7;
+        text-align: center;
+        padding: 2rem 2.5rem;
+    }
+
+    .love {
+        margin: 0 auto;
+        max-width: 50rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .love-box {
+        box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.487);
+        padding: 1rem;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .male,
+    .female {
+        text-align: left;
+        display: flex;
+        padding: 1rem .5rem;
+        flex-direction: column;
+    }
+
+    .male_input,
+    .female_input {
+        border-radius: 5rem;
+        padding: .5rem;
+        backface-visibility: hidden;
+        border-color: rgba(0, 0, 0, 0.563);
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .calculate {
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        background: rgba(6, 100, 6, 0.926);
+        color: white;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .emoji {
+        display: inline-block;
+        position: absolute;
+        top: 37%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid black 1px;
+        padding: .4rem .5rem;
+        border-radius: 50%;
+        z-index: 444;
+        background: white;
+    }
+
+    .retry {
+        top: 43%;
+
+    }
+
+    .display {
+        display: none;
+    }
+
+    @media screen and (min-width:760px) {
+        .inputcontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            height: 20vh;
+
+        }
+
+        .female_input {
+            align-self: start;
+        }
+    }
+</style>
+
+<body>
+    <section class="love">
+        <h1> Find Love % between</h1>
+        <div class="love-box">
+            <form action="#">
+                <div class="inputcontainer">
+
+
+                    <div class="male">
+                        <label for="male" class="male_name"> Your Name</label>
+                        <input id="male" type="text" class="male_input" placeholder="Enter your Name" required>
+                    </div>
+                    <hr>
+                    <p class="emoji love-1">❤️</p>
+                    <img class="emoji retry display" src="./retry.svg" alt="">
+                    <div class="female">
+                        <label for="female" class="female_name"> Crush Name</label>
+                        <input id="female" type="text" class="female_input" placeholder="Enter your Partner's Name"
+                            required>
+                    </div>
+                </div>
+                <button type="submit" class="calculate"> caculate love %</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
